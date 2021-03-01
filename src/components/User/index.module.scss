@@ -1,12 +1,11 @@
+@import 'src/styles/mixins';
+
 .container {
-	width: 100%;
-	height: 100%;
+	@include size(100%, 100%);
 
 	background-color: #222;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	@include flex-align-and-justify(center, center);
 
 	& .user {
 		display: flex;
@@ -15,14 +14,12 @@
 		padding: 1.6rem;
 
 		background-color: #555;
-		border: 2px solid #777;
-		border-radius: 10px;
+		@include border-rounded(2px, solid, #777, 10px);
 
 		& .avatar {
 			border-radius: 50%;
 			object-fit: cover;
-			width: 100px;
-			height: 100px;
+			@include size(100px, 100px);
 		}
 
 		& span {
@@ -31,21 +28,17 @@
 			gap: 0.6rem;
 
 			& .name {
-				color: rgb(171, 136, 255);
-				font: 700 3.6rem 'Rubik';
+				@include font(700, 3.6rem, 'Rubik', #ab88ff);
 			}
 
 			& .login {
 				margin-bottom: 0.6rem;
-				color: #bdbdbd;
-				font: 500 1.6rem 'Rubik';
+				@include font(500, 1.6rem, 'Rubik', #bdbdbd);
 			}
 
 			& .bio {
-				color: #fefefe;
-				font: 400 1.6rem 'Rubik';
+				@include font(400, 1.6rem, 'Rubik', #bdbdbd);
 			}
 		}
 	}
 }
-

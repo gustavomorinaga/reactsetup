@@ -3,7 +3,7 @@ import { User } from '@models/user';
 
 import styles from './index.module.scss';
 
-export const UserComponent: React.FC = () => {
+const UserComponent: React.FC = () => {
 	const { data } = useFetch<User>('http://api.github.com/users/gmatthewsfeuer');
 
 	if (!data) {
@@ -23,3 +23,5 @@ export const UserComponent: React.FC = () => {
 		</article>
 	);
 };
+
+export default UserComponent;
