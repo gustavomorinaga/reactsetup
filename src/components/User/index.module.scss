@@ -33,6 +33,8 @@
 
 			& .login {
 				margin-bottom: 0.6rem;
+				@include flex-align-and-justify(center);
+				gap: 5px;
 				@include font(500, 1.6rem, 'Rubik', #bdbdbd);
 			}
 
