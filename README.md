@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- markdownlint-disable MD026 -->
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD041 -->
 
-## Getting Started
+<p align="center">
+  <br>
+  <!-- <img src="#" alt="Logotipo do Projeto" /> -->
+  <br>
+</p>
+<p align="center">
+  Project Description
+</p>
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<p align="center">
+  <a href="https://vercel.com" target="_blank" rel="noopener">
+    <img src="./public/powered-by-vercel.svg" width="175" alt="Powered by Vercel" />
+  </a>
+  <br>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
+  <br>
+  <a href="https://forthebadge.com">
+    <img src="https://forthebadge.com/images/badges/validated-html5.svg" alt="Validated HTML5" />
+    <img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" alt="Powered by Coffee" />
+    <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Made with TypeScript" />
+  </a>
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!--
+<div align="center">
+  <img src="./docs/demo/demo_hotcode_desktop.gif" alt="demo desktop" width="600px" height="300px">
+  <img src="./docs/demo/demo_hotcode_mobile.gif" alt="demo mobile" height="300px">
+</div>
+-->
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 🚀 [Demo](link_website_project)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## ❔ About
 
-## Learn More
+Place here text about the project.
 
-To learn more about Next.js, take a look at the following resources:
+## 🌟 Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This app features all the latest tools and good practices in web development!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- ⚛️ [Next.js](https://nextjs.org/) – A complete React framework for hybrid and server rendering
+- ❇️ [SWR](https://swr.vercel.app/) – A React Hooks library for data fetching
+- 🔄 [Axios](https://github.com/axios/axios) – Promise based HTTP client for the browser and Node.js
+- 💹 [Node.js](https://nodejs.org/en/) – A JavaScript runtime built on Chrome's V8 JavaScript engine
+- 🎨 [Sass](https://sass-lang.com/) – A powerful and professional CSS extension language
+- ✨ [React Icons](https://react-icons.github.io/react-icons/) – A collection of popular icons to React projects
 
-## Deploy on Vercel
+## ▶️ Get Started
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Click on **Use this template** button beside the Code button
+2. Configure your new project with a name and other options
+3. Clone this generated repository to your local machine
+4. Move yourself to the project using `cd reactsetup`
+5. Run `yarn` to install all dependencies
+6. Run `yarn start` or `yarn dev`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+👨‍💻 Good Hacking!
+
+## ❤️ Thanks for your attention!
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.

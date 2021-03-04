@@ -5,7 +5,7 @@ const Home: React.FC = () => {
 	return (
 		<>
 			<Head>
-				<title>Novo Projeto</title>
+				<title>New Next.js Project</title>
 			</Head>
 
 			<main>
