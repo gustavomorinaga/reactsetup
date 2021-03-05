@@ -19,7 +19,7 @@
     "jsx": "preserve",
 		"baseUrl": ".",
 		"paths": {
-			"@assets/*": ["./src/assets/*"],
+			"@assets/*": ["./public/assets/*"],
 			"@components/*": ["./src/components/*"],
 			"@hooks/*": ["./src/hooks/*"],
 			"@models/*": ["./src/models/*"],
