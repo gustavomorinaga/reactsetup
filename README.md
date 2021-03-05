@@ -2,25 +2,32 @@
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD041 -->
 
-<p align="center">
+<h1 align="center">
+  Next.js Template
+</h1>
+
+<!-- <p align="center">
   <br>
-  <!-- <img src="#" alt="Logotipo do Projeto" /> -->
+  <img src="#" alt="Logotipo do Projeto" />
   <br>
-</p>
+</p> -->
 <p align="center">
   Project Description
 </p>
 
 ---
 
+<br>
 <p align="center">
   <a href="https://vercel.com" target="_blank" rel="noopener">
     <img src="./public/powered-by-vercel.svg" width="175" alt="Powered by Vercel" />
   </a>
   <br>
+  <br>
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
   </a>
+  <br>
   <br>
   <a href="https://forthebadge.com">
     <img src="https://forthebadge.com/images/badges/validated-html5.svg" alt="Validated HTML5" />
@@ -31,8 +38,8 @@
 
 <!--
 <div align="center">
-  <img src="./docs/demo/demo_hotcode_desktop.gif" alt="demo desktop" width="600px" height="300px">
-  <img src="./docs/demo/demo_hotcode_mobile.gif" alt="demo mobile" height="300px">
+  <img src="#" alt="Demo Desktop" width="600px" height="300px">
+  <img src="#" alt="Demo Mobile" height="300px">
 </div>
 -->
 
@@ -61,8 +68,10 @@ This app features all the latest tools and good practices in web development!
 2. Configure your new project with a name and other options
 3. Clone this generated repository to your local machine
 4. Move yourself to the project using `cd reactsetup`
-5. Run `yarn` to install all dependencies
-6. Run `yarn start` or `yarn dev`
+5. Create a new file `.env.local` and add line `API_BASE_URL="http://api.github.com"`
+6. Put your GitHub login into variable `login` in `src/components/User/index.tsx`
+7. Run `yarn` to install all dependencies
+8. Run `yarn start` or `yarn dev`
 
 👨‍💻 Good Hacking!
 

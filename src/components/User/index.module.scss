@@ -1,9 +1,10 @@
 @import 'src/styles/mixins';
+@import 'src/styles/variables';
 
 .container {
 	@include size(100%, 100%);
 
-	background-color: #222;
+	background-color: $secondaryDark;
 
 	@include flex-align-and-justify(center, center);
 
@@ -11,14 +12,16 @@
 		display: flex;
 		gap: 1.6rem;
 
+		width: 65%;
+
 		padding: 1.6rem;
 
 		background-color: #555;
-		@include border-rounded(2px, solid, #777, 10px);
+		@include border-rounded(2px, solid, $secondary, 10px);
 
 		& .avatar {
-			border-radius: 50%;
 			object-fit: cover;
+			@include border-rounded(5px, solid, $primary, 50%);
 			@include size(100px, 100px);
 		}
 
@@ -28,18 +31,18 @@
 			gap: 0.6rem;
 
 			& .name {
-				@include font(700, 3.6rem, 'Rubik', #ab88ff);
+				@include font(700, 3.6rem, 'Rubik', $primary);
 			}
 
 			& .login {
 				margin-bottom: 0.6rem;
 				@include flex-align-and-justify(center);
 				gap: 5px;
-				@include font(500, 1.6rem, 'Rubik', #bdbdbd);
+				@include font(500, 1.6rem, 'Rubik', $secondaryLight);
 			}
 
 			& .bio {
-				@include font(400, 1.6rem, 'Rubik', #bdbdbd);
+				@include font(400, 1.6rem, 'Rubik', $secondaryLight);
 			}
 		}
 	}

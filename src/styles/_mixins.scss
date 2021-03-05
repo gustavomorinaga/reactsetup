@@ -21,6 +21,12 @@
 
 // ----------- FLEXBOX -----------
 
+@mixin display-center() {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 @mixin flex-align-and-justify(
 	$align-items: flex-start,
 	$justify-content: flex-start
