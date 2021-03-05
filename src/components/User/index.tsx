@@ -4,7 +4,7 @@ import styles from './index.module.scss';
 
 import { FiAlertCircle } from 'react-icons/fi';
 
-export default function UserComponent({ user }) {
+export default function UserComponent({ user }): JSX.Element {
 	if (!user) {
 		return (
 			<article className={styles.container}>

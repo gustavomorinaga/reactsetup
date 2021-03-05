@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import UserComponent from '@components/User';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 
 import { User } from '@models/user';
 
@@ -19,7 +19,9 @@ export const getStaticProps: GetStaticProps = async () => {
 	};
 };
 
-export default function Home({ user }) {
+const Home: NextPage = ({
+	user,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
 	const { data } = useFetch(`${API_BASE_URL}/users/${login}`, user);
 
 	return (
@@ -33,4 +35,6 @@ export default function Home({ user }) {
 			</main>
 		</>
 	);
-}
+};
+
+export default Home;
