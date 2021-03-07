@@ -59,6 +59,7 @@ This app features all the latest tools and good practices in web development!
 - ❇️ [SWR](https://swr.vercel.app/) – A React Hooks library for data fetching
 - 🔄 [Axios](https://github.com/axios/axios) – Promise based HTTP client for the browser and Node.js
 - 💹 [Node.js](https://nodejs.org/en/) – A JavaScript runtime built on Chrome's V8 JavaScript engine
+- 🎞️ [Framer Motion](https://www.framer.com/motion/) – A production-ready motion library for React
 - 🎨 [Sass](https://sass-lang.com/) – A powerful and professional CSS extension language
 - ✨ [React Icons](https://react-icons.github.io/react-icons/) – A collection of popular icons to React projects
 
