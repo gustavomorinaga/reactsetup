@@ -19,7 +19,9 @@
     "jsx": "preserve",
 		"baseUrl": ".",
 		"paths": {
-			"@assets/*": ["./public/assets/*"],
+			"@images/*": ["./public/assets/images/*"],
+			"@sounds/*": ["./public/assets/sounds/*"],
+			"@videos/*": ["./public/assets/videos/*"],
 			"@components/*": ["./src/components/*"],
 			"@hooks/*": ["./src/hooks/*"],
 			"@models/*": ["./src/models/*"],

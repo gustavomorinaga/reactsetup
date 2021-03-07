@@ -8,21 +8,21 @@ import { useFetch } from '@hooks/useFetch';
 import { fetcher } from '@services/api';
 const { API_BASE_URL } = process.env;
 
-const login = ''; // <- Put here your login!
+const login = 'gmatthewsfeuer'; // <- Put here your login!
 
 export const getStaticProps: GetStaticProps = async () => {
 	const response: User = await fetcher(`${API_BASE_URL}/users/${login}`);
 
 	return {
 		props: { user: response },
-		revalidate: 30,
+		revalidate: 120,
 	};
 };
 
 const Home: NextPage = ({
 	user,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-	const { data } = useFetch(`${API_BASE_URL}/users/${login}`, user);
+	const { data } = useFetch(`users/${login}`, user);
 
 	return (
 		<>
