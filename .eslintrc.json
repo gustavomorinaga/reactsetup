@@ -6,7 +6,11 @@
     "jest": true
   },
   "extends": [
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "prettier/airbnb"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
