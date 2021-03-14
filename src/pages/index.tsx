@@ -6,12 +6,11 @@ import { User } from '@models/user';
 
 import { useFetch } from '@hooks/useFetch';
 import { fetcher } from '@services/api';
-const { API_BASE_URL } = process.env;
 
-const login = 'gmatthewsfeuer'; // <- Put here your login!
+const login = ''; // <- Put your login here!
 
 export const getStaticProps: GetStaticProps = async () => {
-	const response: User = await fetcher(`${API_BASE_URL}/users/${login}`);
+	const response: User = await fetcher(`users/${login}`);
 
 	return {
 		props: { user: response },

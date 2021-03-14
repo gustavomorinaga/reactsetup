@@ -1,7 +1,8 @@
 import axios from 'axios';
+const { API_BASE_URL } = process.env;
 
 export const api = axios.create({
-	baseURL: 'http://localhost:3333',
+	baseURL: API_BASE_URL,
 });
 
 export const fetcher = async (url: string) =>
