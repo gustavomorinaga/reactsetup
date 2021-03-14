@@ -5,5 +5,5 @@ export const api = axios.create({
 	baseURL: API_BASE_URL,
 });
 
-export const fetcher = async (url: string) =>
-	await api.get(url).then(res => res.data);
+export const fetcher = async <Data = any>(url: string): Promise<Data> =>
+	await api.get<Data>(url).then<Data>(res => res.data);

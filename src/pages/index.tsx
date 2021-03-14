@@ -10,7 +10,7 @@ import { fetcher } from '@services/api';
 const login = ''; // <- Put your login here!
 
 export const getStaticProps: GetStaticProps = async () => {
-	const response: User = await fetcher(`users/${login}`);
+	const response = await fetcher<User>(`users/${login}`);
 
 	return {
 		props: { user: response },
@@ -21,7 +21,7 @@ export const getStaticProps: GetStaticProps = async () => {
 const Home: NextPage = ({
 	user,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-	const { data } = useFetch(`users/${login}`, user);
+	const { data } = useFetch<User>(`users/${login}`, user);
 
 	return (
 		<>
