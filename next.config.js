@@ -6,4 +6,8 @@ module.exports = withImages({
 	env: {
 		API_BASE_URL: process.env.API_BASE_URL,
 	},
+	future: {
+		webpack5: true,
+		strictPostcssConfiguration: true,
+	},
 });
