@@ -7,7 +7,7 @@ import { User } from '@models/user';
 import { useFetch } from '@hooks/useFetch';
 import { fetcher } from '@services/api';
 
-const login = ''; // <- Put your login here!
+const login = 'gmatthewsfeuer'; // <- Put your login here!
 
 export const getStaticProps: GetStaticProps = async () => {
 	const response = await fetcher<User>(`users/${login}`);
