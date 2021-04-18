@@ -1,4 +1,5 @@
 import Loader from '@components/Loader';
+import Image from 'next/image';
 
 import { motion } from 'framer-motion';
 import styles from './index.module.scss';
@@ -52,14 +53,18 @@ export default function UserComponent({ user }): JSX.Element {
 					loading="lazy"
 					alt={user.name}
 				/>
-				<span>
-					<h1 className={styles.name}>{user.name}</h1>
-					<h4 className={styles.login}>
-						<FiAlertCircle />
-						{user.login}
-					</h4>
+				<div className={styles.content}>
+					<span className={styles.account}>
+						<span className={styles.name}>
+							{user.name}
+						</span>
+						<span className={styles.login}>
+							<FiAlertCircle />
+							{user.login}
+						</span>
+					</span>
 					<p className={styles.bio}>{user.bio}</p>
-				</span>
+				</div>
 			</motion.span>
 		</article>
 	);

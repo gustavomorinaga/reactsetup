@@ -1,59 +1,45 @@
-@import 'src/styles/mixins';
-@import 'src/styles/variables';
-
 .container {
-	@include size(100%, 100%);
-
-	background-color: $secondaryDark;
-
-	@include flex-align-and-justify(center, center);
+	@apply
+		w-full h-full
+		flex items-center justify-center
+		bg-gray-900
+	;
 
 	& .user {
-		display: flex;
-		gap: 1.6rem;
-
-		max-width: 65%;
-
-		padding: 1.6rem;
-
-		background-color: #555;
-		@include border-rounded(2px, solid, $secondary, 10px);
+		@apply
+			flex gap-3 items-center justify-center md:flex-row flex-col
+			max-w-screen-md
+			p-3
+			bg-gray-700 shadow hover:shadow-xl transition-shadow duration-300 ease-in-out
+			border-2 border-solid border-gray-600 rounded-2xl
+		;
 
 		& .avatar {
-			object-fit: cover;
-			@include border-rounded(5px, solid, $primary, 50%);
-			@include size(100px, 100px);
+			@apply
+				md:w-32 md:h-32 w-48 h-48
+				object-cover
+				border-4 border-solid border-purple-500 rounded-full
+			;
 		}
 
-		& span {
-			display: flex;
-			flex-direction: column;
-			gap: 0.6rem;
+		& .content {
+			@apply flex flex-col;
 
-			& .name {
-				@include font(700, 3.6rem, 'Rubik', $primary);
-			}
+			& .account {
+				& .name {
+					@apply font-sans font-bold text-3xl text-purple-500;
+				}
 
-			& .login {
-				margin-bottom: 0.6rem;
-				@include flex-align-and-justify(center);
-				gap: 5px;
-				@include font(500, 1.6rem, 'Rubik', $secondaryLight);
+				& .login {
+					@apply
+						flex items-center gap-1
+						font-sans font-medium text-lg text-gray-400
+					;
+				}
 			}
 
 			& .bio {
-				@include font(400, 1.6rem, 'Rubik', $secondaryLight);
-			}
-		}
-
-		@media (max-width: 480px) {
-			& {
-				flex-direction: column;
-				@include flex-align-and-justify(center, center);
-			}
-
-			& span .name {
-				font-size: 2.6rem;
+				@apply font-sans font-normal text-base text-gray-400;
 			}
 		}
 	}
