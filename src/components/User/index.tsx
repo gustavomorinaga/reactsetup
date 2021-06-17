@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import styles from './index.module.scss';
 
-import { FiAlertCircle } from 'react-icons/fi';
+import { FiAtSign } from 'react-icons/fi';
 
 export default function UserComponent({ user }): JSX.Element {
 	const cardEffects: any = {
@@ -47,11 +47,14 @@ export default function UserComponent({ user }): JSX.Element {
 				variants={cardEffects}
 				whileHover={hoverEffects}
 			>
-				<img
+				<Image
 					className={styles.avatar}
 					src={user.avatar_url}
 					loading="lazy"
+					objectFit="cover"
 					alt={user.name}
+					width="100%"
+					height="100%"
 				/>
 				<div className={styles.content}>
 					<span className={styles.account}>
@@ -59,7 +62,7 @@ export default function UserComponent({ user }): JSX.Element {
 							{user.name}
 						</span>
 						<span className={styles.login}>
-							<FiAlertCircle />
+							<FiAtSign />
 							{user.login}
 						</span>
 					</span>

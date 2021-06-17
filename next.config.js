@@ -7,7 +7,12 @@ module.exports = withImages({
 		API_BASE_URL: process.env.API_BASE_URL,
 	},
 	future: {
-		webpack5: true,
 		strictPostcssConfiguration: true,
 	},
+	extends: [
+    'plugin:@next/next/recommended',
+  ],
+	images: {
+    domains: ['avatars.githubusercontent.com'],
+  },
 });
