@@ -28,19 +28,21 @@
 
 			& .account {
 				& .name {
-					@apply font-sans font-bold text-3xl text-purple-500;
+					@apply font-sans font-bold text-3xl text-purple-400;
 				}
 
 				& .login {
 					@apply
 						flex items-center gap-1
-						font-sans font-medium text-lg text-gray-400
+						font-sans font-medium text-lg text-gray-200 hover:underline
+						opacity-75
+						transition hover:opacity-100 ease-in-out
 					;
 				}
 			}
 
 			& .bio {
-				@apply font-sans font-normal text-base text-gray-400;
+				@apply font-sans font-normal text-base text-gray-200;
 			}
 		}
 	}
