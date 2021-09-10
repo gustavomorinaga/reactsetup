@@ -4,42 +4,53 @@
   "private": true,
   "author": "Gustavo Matheus <gustavo.morinaga27@gmail.com>",
   "description": "Template for React, with Next.js, SWR, Axios, TypeScript, ESLint, Prettier, Framer Motion, Tailwind and Sass",
+  "husky": {
+    "hooks": {
+			"pre-commit": "lint-staged"
+		}
+  },
   "scripts": {
     "dev": "next dev",
+    "lint": "next lint",
+		"prepare": "husky install",
+		"pre-commit": "yarn lint",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "framer-motion": "^4.1.17",
-    "next": "^11.0.1",
+    "next": "^11.1.2",
     "next-images": "^1.8.1",
     "postcss-import": "^14.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
-    "sass": "^1.37.5",
-    "swr": "^0.5.6"
+    "sass": "^1.39.0",
+    "sharp": "^0.29.0",
+    "swr": "^1.0.0"
   },
   "devDependencies": {
-    "@types/node": "^16.4.13",
-    "@types/react": "^17.0.16",
-    "@typescript-eslint/eslint-plugin": "^4.29.0",
-    "@typescript-eslint/parser": "^4.29.0",
-    "autoprefixer": "^10.3.1",
+    "@types/node": "^16.7.10",
+    "@types/react": "^17.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "autoprefixer": "^10.3.4",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-next": "^11.0.1",
+    "eslint-config-next": "^11.1.2",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
-    "tailwindcss": "^2.2.7",
-    "typescript": "^4.3.5"
+    "tailwindcss": "^2.2.9",
+    "typescript": "^4.4.2"
   }
 }

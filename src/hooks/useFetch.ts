@@ -9,7 +9,7 @@ export function useFetch<Data = any, Error = any>(url: string, initial?: any) {
 
 			return response;
 		},
-		{ initialData: initial }
+		{ fallbackData: initial }
 	);
 
 	return { data, error, mutate };

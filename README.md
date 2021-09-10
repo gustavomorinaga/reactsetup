@@ -61,7 +61,10 @@ This app features all the latest tools and good practices in web development!
 - 🎞️ [Framer Motion](https://www.framer.com/motion/) – A production-ready motion library for React
 - 🎨 [Sass](https://sass-lang.com/) – A powerful and professional CSS extension language
 - ✨ [React Icons](https://react-icons.github.io/react-icons/) – A collection of popular icons to React projects
-- 📝 [Tailwind CSS](https://tailwindcss.com/) – A utility-first CSS framework packed with classes
+- 📝 [Tailwind CSS](https://tailwindcss.com/) – A utility-first CSS framework packed with classes[
+- ]
+- 🐺 [Husky](https://github.com/typicode/husky) – Modern native Git hooks made easy
+- 💩 [lint-staged](https://github.com/okonet/lint-staged) – Run linters against staged git files and don't let 💩 slip into your code base
 
 ## ▶️ Get Started
 

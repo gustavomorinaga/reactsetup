@@ -61,10 +61,10 @@ export default function UserComponent({ user }): JSX.Element {
 						<span className={styles.name}>
 							{user.name}
 						</span>
-						<span className={styles.login}>
+						<a className={styles.login} href={user.html_url} target="_blank" rel="noopener noreferrer">
 							<FiAtSign />
 							{user.login}
-						</span>
+						</a>
 					</span>
 					<p className={styles.bio}>{user.bio}</p>
 				</div>
