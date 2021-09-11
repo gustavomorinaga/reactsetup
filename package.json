@@ -6,14 +6,14 @@
   "description": "Template for React, with Next.js, SWR, Axios, TypeScript, ESLint, Prettier, Framer Motion, Tailwind and Sass",
   "husky": {
     "hooks": {
-			"pre-commit": "lint-staged"
-		}
+      "pre-commit": "lint-staged"
+    }
   },
   "scripts": {
     "dev": "next dev",
     "lint": "next lint",
-		"prepare": "husky install",
-		"pre-commit": "yarn lint",
+    "prepare": "husky install",
+    "pre-commit": "yarn lint",
     "build": "next build",
     "start": "next start"
   },
@@ -31,6 +31,8 @@
     "swr": "^1.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@types/node": "^16.7.10",
     "@types/react": "^17.0.19",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
