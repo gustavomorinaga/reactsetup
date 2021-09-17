@@ -1,4 +1,4 @@
-export interface User {
+export interface IUser {
 	login: string;
 	avatar_url: string;
 	url: string;

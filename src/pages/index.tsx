@@ -1,39 +1,31 @@
+import SearchComponent from "@components/Search";
+import { NextPage } from "next";
 import Head from 'next/head';
-import UserComponent from '@components/User';
-import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
+import { useRouter } from 'next/router';
+import { useState } from "react";
 
-import { User } from '@models/user';
+const HomePage: NextPage = () => {
+	const [login, setLogin] = useState('');
 
-import { useFetch } from '@hooks/useFetch';
-import { fetcher } from '@services/api';
+	const router = useRouter();
 
-const login = 'gmatthewsfeuer'; // <- Put your login here!
+	const handleChangeLogin = ({ currentTarget }) => setLogin(currentTarget.value);
 
-export const getStaticProps: GetStaticProps = async () => {
-	const response = await fetcher<User>(`users/${login}`);
-
-	return {
-		props: { user: response },
-		revalidate: 120,
-	};
-};
-
-const Home: NextPage = ({
-	user,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
-	const { data } = useFetch<User>(`users/${login}`, user);
+	const handleSearchLogin = () => {
+		if (login) router.push(`/${login}`);
+	}
 
 	return (
 		<>
 			<Head>
-				<title>New Next.js Project</title>
+				<title>🔍 Search GitHub Profile...</title>
 			</Head>
 
 			<main>
-				<UserComponent user={data} />
+				<SearchComponent login={login} handleChangeLogin={handleChangeLogin} handleSearchLogin={handleSearchLogin} placeholder="Search GitHub Profile..." />
 			</main>
 		</>
 	);
-};
+}
 
-export default Home;
+export default HomePage;

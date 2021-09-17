@@ -1,0 +1,48 @@
+.container {
+	@apply
+		w-full h-full overflow-hidden
+		flex items-center justify-center
+	;
+
+	& .search {
+		@apply w-1/2 flex gap-2;
+
+		& label {
+			@apply
+				w-full flex items-center gap-4 px-4
+				bg-gray-700 focus-within:bg-gray-600
+				border-4 border-transparent focus-within:border-purple-500 rounded-2xl
+				text-gray-300 focus-within:text-white
+				shadow-xl
+				transition ease-in-out
+			;
+
+			& .label_icon {
+				@apply text-2xl text-current;
+			}
+
+			& input {
+				@apply
+					w-full h-full
+					appearance-none leading-tight outline-none
+					bg-transparent
+					text-xl font-sans text-gray-200 focus-within:text-white
+					placeholder-gray-300 focus:placeholder-gray-200
+					transition ease-in-out
+				;
+			}
+		}
+
+		& button {
+			@apply
+				flex items-center justify-center px-6 py-4
+				text-2xl text-gray-100
+				bg-purple-700 hover:bg-purple-800
+				rounded-2xl
+				shadow-xl
+				transition ease-in-out
+				cursor-pointer
+			;
+		}
+	}
+}

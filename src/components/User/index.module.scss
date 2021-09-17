@@ -1,48 +1,58 @@
 .container {
 	@apply
-		w-full h-full
+		w-full h-full overflow-hidden
 		flex items-center justify-center
-		bg-gray-900
-		bg-hero-pattern
 	;
+
+	& .error_message {
+		@apply
+			p-4
+			font-sans font-bold text-5xl text-red-600
+			border-2 bg-red-400 border-solid border-red-600 rounded-2xl
+		;
+	}
 
 	& .user {
 		@apply
-			flex gap-3 items-center justify-center md:flex-row flex-col
-			max-w-screen-md
+			md:min-w-1/4
+			flex gap-3 md:items-start items-center justify-center md:flex-row flex-col
 			p-3
 			bg-gray-700 shadow hover:shadow-xl transition-shadow duration-300 ease-in-out
 			border-2 border-solid border-gray-600 rounded-2xl
+			cursor-move
 		;
 
 		& .avatar {
 			@apply
-				md:w-32 md:h-32 w-48 h-48
-				border-4 border-solid border-purple-500 rounded-full
+				relative md:w-24 md:h-24 w-48 h-48 overflow-hidden
+				border-2 border-solid border-purple-400 rounded-full
 			;
 		}
 
 		& .content {
-			@apply flex flex-col;
+			@apply flex flex-col max-w-xl;
 
 			& .account {
 				& .name {
-					@apply font-sans font-bold text-3xl text-purple-400;
+					@apply font-sans font-bold text-3xl text-purple-400 leading-none m-0 mb-1;
 				}
 
-				& .login {
-					@apply
-						w-min
-						flex items-center gap-1
-						font-sans font-medium text-lg text-gray-200 hover:underline
-						opacity-75
-						transition hover:opacity-100 ease-in-out
-					;
+				& .link {
+					@apply flex w-full;
+
+					& .login {
+						@apply
+							flex items-center gap-1
+							font-sans font-medium text-lg text-gray-200 hover:underline leading-none
+							opacity-75
+							transition hover:opacity-100 ease-in-out
+						;
+					}
 				}
 			}
 
 			& .bio {
-				@apply font-sans font-normal text-base text-gray-200;
+				@apply font-sans font-normal text-base text-gray-200 mb-0;
 			}
 		}
 	}

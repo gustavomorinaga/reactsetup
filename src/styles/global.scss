@@ -5,3 +5,5 @@
 html, body { @apply h-screen m-0; }
 
 main, #__next { @apply h-full; }
+
+main { @apply bg-gray-900 bg-hero-pattern; }

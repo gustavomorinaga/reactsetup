@@ -24,7 +24,7 @@
 			"@videos/*": ["./public/assets/videos/*"],
 			"@components/*": ["./src/components/*"],
 			"@hooks/*": ["./src/hooks/*"],
-			"@models/*": ["./src/models/*"],
+			"@interfaces/*": ["./src/interfaces/*"],
 			"@pages/*": ["./src/pages/*"],
 			"@services/*": ["./src/services/*"],
 			"@styles/*": ["./src/styles/*"],

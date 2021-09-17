@@ -1,12 +1,15 @@
+import { useRef } from 'react';
 import Loader from '@components/Loader';
 import Image from 'next/image';
 
 import { motion } from 'framer-motion';
 import styles from './index.module.scss';
 
-import { FiAtSign } from 'react-icons/fi';
+import { FiGithub } from 'react-icons/fi';
 
-export default function UserComponent({ user }): JSX.Element {
+export default function UserComponent({ user, error }): JSX.Element {
+	const constraintsRef = useRef(null);
+
 	const cardEffects: any = {
 		hidden: {
 			scale: 0.8,
@@ -30,45 +33,61 @@ export default function UserComponent({ user }): JSX.Element {
 		},
 	};
 
-	if (!user) {
-		return (
-			<article className={styles.container}>
-				<Loader />
-			</article>
-		);
-	}
+	if (error) return (
+		<article className={styles.container}>
+			<h1 className={styles.error_message}>Houve um erro!</h1>
+		</article>
+	);
+
+	if (!user) return (
+		<article className={styles.container}>
+			<Loader />
+		</article>
+	);
 
 	return (
-		<article className={styles.container}>
-			<motion.span
+		<motion.article className={styles.container} ref={constraintsRef}>
+			<motion.section
 				initial="hidden"
 				animate="visible"
 				className={styles.user}
 				variants={cardEffects}
 				whileHover={hoverEffects}
+				drag
+				dragConstraints={constraintsRef}
+				dragElastic={0.2}
 			>
-				<Image
-					className={styles.avatar}
-					src={user.avatar_url}
-					loading="lazy"
-					objectFit="cover"
-					alt={user.name}
-					width="100%"
-					height="100%"
-				/>
+				<picture className={styles.avatar}>
+					<Image
+						id="image"
+						src={user.avatar_url}
+						loading="lazy"
+						layout="fill"
+						objectFit="cover"
+						alt={user.name}
+					/>
+				</picture>
 				<div className={styles.content}>
-					<span className={styles.account}>
-						<span className={styles.name}>
-							{user.name}
-						</span>
-						<a className={styles.login} href={user.html_url} target="_blank" rel="noopener noreferrer">
-							<FiAtSign />
-							{user.login}
-						</a>
-					</span>
-					<p className={styles.bio}>{user.bio}</p>
+					<header className={styles.account}>
+						{
+							user.name && (
+								<h1 className={styles.name}>
+									{user.name}
+								</h1>
+							)
+						}
+						<div className={styles.link}>
+							<a className={styles.login} href={user.html_url} target="_blank" rel="noopener noreferrer">
+								<FiGithub />
+								{user.login}
+							</a>
+						</div>
+					</header>
+					{
+						user.bio && <p className={styles.bio}>{user.bio}</p>
+					}
 				</div>
-			</motion.span>
-		</article>
+			</motion.section>
+		</motion.article>
 	);
 }
