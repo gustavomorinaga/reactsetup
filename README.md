@@ -6,17 +6,19 @@
   Next.js Template
 </h1>
 
-<!-- <p align="center">
+<!-- Banner Section
+<p align="center">
   <br>
   <img src="#" alt="Logotipo do Projeto" />
   <br>
 </p> -->
 <p align="center">
-  Project Description
+  A super template for React with Next.js and other incredible tools
 </p>
 
 ---
 
+<!-- Badges Section
 <br>
 <p align="center">
   <a href="https://vercel.com" target="_blank" rel="noopener">
@@ -35,21 +37,24 @@
     <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Made with TypeScript" />
   </a>
 </p>
+-->
 
-<!--
+<!-- Desktop/Mobile GIF Demo Section
 <div align="center">
   <img src="#" alt="Demo Desktop" width="600px" height="300px">
   <img src="#" alt="Demo Mobile" height="300px">
 </div>
--->
 
 ---
 
-## 🚀 [Demo](link_website_project)
+-->
+
+<!-- Link Demo Section -->
+## 🚀 [Demo](https://reactsetup-sigma.vercel.app)
 
 ## ❔ About
 
-Place here text about the project.
+This is a complete template all you need for your next react projects, with all the Best Practices of JAMStack. Customize and enjoy!
 
 ## 🌟 Features
 
@@ -73,14 +78,15 @@ This app features all the latest tools and good practices in web development!
 3. Clone this generated repository to your local machine
 4. Move yourself to the project using `cd reactsetup`
 5. Create a new file `.env.local` and add line `API_BASE_URL="http://api.github.com"`
-6. Put your GitHub login into variable `login` in `src/components/User/index.tsx`
-7. Run `yarn` to install all dependencies
-8. Run `yarn start` or `yarn dev`
+6. Run `yarn` to install all dependencies
+7. Run `yarn start` or `yarn dev`
 
 👨‍💻 Good Hacking!
 
 ## ❤️ Thanks for your attention!
 
+<!-- License Section
 ### License
 
 This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.
+-->
