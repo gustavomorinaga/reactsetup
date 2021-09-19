@@ -9,10 +9,8 @@ module.exports = withImages({
 	future: {
 		strictPostcssConfiguration: true,
 	},
-	extends: [
-    'plugin:@next/next/recommended',
-  ],
+	extends: ['plugin:@next/next/recommended'],
 	images: {
-    domains: ['avatars.githubusercontent.com'],
-  },
+		domains: ['avatars.githubusercontent.com'],
+	},
 });

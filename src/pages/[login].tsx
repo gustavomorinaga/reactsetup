@@ -16,7 +16,7 @@ const UserPage: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>{login}</title>
+				<title>{ login && !error ? `👤 ${login}` : !error ? 'Loading...' : 'Erro!' }</title>
 			</Head>
 
 			<main>

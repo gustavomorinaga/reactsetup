@@ -2,27 +2,15 @@ import { useRef } from 'react';
 import Loader from '@components/Loader';
 import Image from 'next/image';
 
+import { IUser_Page } from '@interfaces/IUser';
+
 import { motion } from 'framer-motion';
 import styles from './index.module.scss';
 
-import { FiGithub } from 'react-icons/fi';
+import { FiBook, FiGithub, FiMapPin, FiUsers } from 'react-icons/fi';
 
-export default function UserComponent({ user, error }): JSX.Element {
+export default function UserComponent({ user, error }: IUser_Page): JSX.Element {
 	const constraintsRef = useRef(null);
-
-	const cardEffects: any = {
-		hidden: {
-			scale: 0.8,
-			opacity: 0,
-		},
-		visible: {
-			scale: 1,
-			opacity: 1,
-			transition: {
-				delay: 0.4,
-			},
-		},
-	};
 
 	const hoverEffects: any = {
 		position: 'relative',
@@ -48,14 +36,12 @@ export default function UserComponent({ user, error }): JSX.Element {
 	return (
 		<motion.article className={styles.container} ref={constraintsRef}>
 			<motion.section
-				initial="hidden"
-				animate="visible"
 				className={styles.user}
-				variants={cardEffects}
 				whileHover={hoverEffects}
 				drag
 				dragConstraints={constraintsRef}
-				dragElastic={0.2}
+				dragElastic={0.5}
+				whileDrag={{ opacity: 0.5 }}
 			>
 				<picture className={styles.avatar}>
 					<Image
@@ -83,6 +69,29 @@ export default function UserComponent({ user, error }): JSX.Element {
 							</a>
 						</div>
 					</header>
+					<div className={styles.details}>
+						<div className={styles.follow}>
+							<FiUsers />
+							<span>
+								<strong>{user.followers}</strong> followers
+							</span>
+							·
+							<span>
+								<strong>{user.following}</strong> following
+							</span>
+						</div>
+						<span className={styles.public_repos}>
+							<FiBook />
+							<strong>{user.public_repos}</strong>
+						</span>
+						{
+							user.location && (
+								<span className={styles.location}>
+									<FiMapPin /> {user.location}
+								</span>
+							)
+						}
+					</div>
 					{
 						user.bio && <p className={styles.bio}>{user.bio}</p>
 					}

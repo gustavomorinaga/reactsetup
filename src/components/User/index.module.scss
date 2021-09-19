@@ -1,32 +1,24 @@
 .container {
-	@apply
-		w-full h-full overflow-hidden
-		flex items-center justify-center
-	;
+	@apply w-full h-full overflow-hidden
+		flex items-center justify-center;
 
 	& .error_message {
-		@apply
-			p-4
+		@apply p-4
 			font-sans font-bold text-5xl text-red-600
-			border-2 bg-red-400 border-solid border-red-600 rounded-2xl
-		;
+			border-2 bg-red-400 border-solid border-red-600 rounded-2xl;
 	}
 
 	& .user {
-		@apply
-			md:min-w-1/4
+		@apply md:min-w-1/4
 			flex gap-3 md:items-start items-center justify-center md:flex-row flex-col
 			p-3
 			bg-gray-700 shadow hover:shadow-xl transition-shadow duration-300 ease-in-out
 			border-2 border-solid border-gray-600 rounded-2xl
-			cursor-move
-		;
+			cursor-move;
 
 		& .avatar {
-			@apply
-				relative md:w-24 md:h-24 w-48 h-48 overflow-hidden
-				border-2 border-solid border-purple-400 rounded-full
-			;
+			@apply relative md:w-24 md:h-24 w-48 h-48 overflow-hidden
+				border-2 border-solid border-purple-400 rounded-full;
 		}
 
 		& .content {
@@ -38,17 +30,29 @@
 				}
 
 				& .link {
-					@apply flex w-full;
+					@apply flex w-full mb-2;
 
 					& .login {
-						@apply
-							flex items-center gap-1
+						@apply flex items-center gap-1
 							font-sans font-medium text-lg text-gray-200 hover:underline leading-none
 							opacity-75
-							transition hover:opacity-100 ease-in-out
-						;
+							transition hover:opacity-100 ease-in-out;
 					}
 				}
+			}
+
+			& .details {
+				@apply flex md:items-center items-start md:flex-row flex-col gap-2 font-sans font-light text-gray-50;
+
+				& > * {
+					@apply flex items-center gap-1 px-2 border rounded-lg;
+
+					& strong { @apply font-medium; }
+				}
+
+				& .follow { @apply bg-green-500 border-green-600; }
+				& .public_repos { @apply bg-yellow-500 border-yellow-600; }
+				& .location { @apply bg-blue-500 border-blue-600; }
 			}
 
 			& .bio {
