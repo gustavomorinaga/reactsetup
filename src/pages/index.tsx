@@ -12,7 +12,7 @@ const HomePage: NextPage = () => {
 	const handleChangeLogin = ({ currentTarget }) => setLogin(currentTarget.value);
 
 	const handleSearchLogin = () => {
-		if (login) router.push(`/${login}`);
+		if (login) router.push(`/${login.trim()}`);
 	}
 
 	return (

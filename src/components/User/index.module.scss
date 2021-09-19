@@ -18,7 +18,8 @@
 
 		& .avatar {
 			@apply relative md:w-24 md:h-24 w-48 h-48 overflow-hidden
-				border-2 border-solid border-purple-400 rounded-full;
+				border-2 border-solid border-purple-400 rounded-full
+			;
 		}
 
 		& .content {
