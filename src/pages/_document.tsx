@@ -12,7 +12,10 @@ class MyDocument extends Document<DocumentProps> {
 			<Html lang="en">
 				<Head>
 					<meta charSet="UTF-8" />
-					<meta name="description" content="Template for React, with Next.js, SWR, Axios, TypeScript, ESLint, Prettier, Framer Motion, Tailwind and Sass" />
+					<meta
+						name="description"
+						content="Template for React, with Next.js, SWR, Axios, TypeScript, ESLint, Prettier, Framer Motion, Tailwind and Sass"
+					/>
 					<meta name="robots" content="index, follow" />
 					<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" />

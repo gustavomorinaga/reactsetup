@@ -21,17 +21,19 @@ export default function UserComponent({ user, error }: IUser_Page): JSX.Element 
 		},
 	};
 
-	if (error) return (
-		<article className={styles.container}>
-			<h1 className={styles.error_message}>Houve um erro!</h1>
-		</article>
-	);
+	if (error)
+		return (
+			<article className={styles.container}>
+				<h1 className={styles.error_message}>Houve um erro!</h1>
+			</article>
+		);
 
-	if (!user) return (
-		<article className={styles.container}>
-			<Loader />
-		</article>
-	);
+	if (!user)
+		return (
+			<article className={styles.container}>
+				<Loader />
+			</article>
+		);
 
 	return (
 		<motion.article className={styles.container} ref={constraintsRef}>
@@ -55,15 +57,14 @@ export default function UserComponent({ user, error }: IUser_Page): JSX.Element 
 				</picture>
 				<div className={styles.content}>
 					<header className={styles.account}>
-						{
-							user.name && (
-								<h1 className={styles.name}>
-									{user.name}
-								</h1>
-							)
-						}
+						{user.name && <h1 className={styles.name}>{user.name}</h1>}
 						<div className={styles.link}>
-							<a className={styles.login} href={user.html_url} target="_blank" rel="noopener noreferrer">
+							<a
+								className={styles.login}
+								href={user.html_url}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<FiGithub />
 								{user.login}
 							</a>
@@ -84,17 +85,13 @@ export default function UserComponent({ user, error }: IUser_Page): JSX.Element 
 							<FiBook />
 							<strong>{user.public_repos}</strong>
 						</span>
-						{
-							user.location && (
-								<span className={styles.location}>
-									<FiMapPin /> {user.location}
-								</span>
-							)
-						}
+						{user.location && (
+							<span className={styles.location}>
+								<FiMapPin /> {user.location}
+							</span>
+						)}
 					</div>
-					{
-						user.bio && <p className={styles.bio}>{user.bio}</p>
-					}
+					{user.bio && <p className={styles.bio}>{user.bio}</p>}
 				</div>
 			</motion.section>
 		</motion.article>

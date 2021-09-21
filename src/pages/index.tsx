@@ -1,8 +1,8 @@
-import SearchComponent from "@components/Search";
-import { NextPage } from "next";
+import SearchComponent from '@components/Search';
+import { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { useState } from "react";
+import { useState } from 'react';
 
 const HomePage: NextPage = () => {
 	const [login, setLogin] = useState('');
@@ -11,9 +11,10 @@ const HomePage: NextPage = () => {
 
 	const handleChangeLogin = ({ currentTarget }) => setLogin(currentTarget.value);
 
-	const handleSearchLogin = () => {
+	const handleSearchLogin = (event: Event) => {
+		event.preventDefault();
 		if (login) router.push(`/${login.trim()}`);
-	}
+	};
 
 	return (
 		<>
@@ -22,10 +23,15 @@ const HomePage: NextPage = () => {
 			</Head>
 
 			<main>
-				<SearchComponent login={login} handleChangeLogin={handleChangeLogin} handleSearchLogin={handleSearchLogin} placeholder="Search GitHub Profile..." />
+				<SearchComponent
+					login={login}
+					handleChangeLogin={handleChangeLogin}
+					handleSearchLogin={handleSearchLogin}
+					placeholder="Search GitHub Profile..."
+				/>
 			</main>
 		</>
 	);
-}
+};
 
 export default HomePage;
