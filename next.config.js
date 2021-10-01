@@ -1,7 +1,9 @@
+const withPlugins = require('next-compose-plugins');
 const withImages = require('next-images');
+const withPWA = require('next-pwa');
+const runtimeCaching = require('next-pwa/cache');
 
-module.exports = withImages({
-	inlineImageLimit: false,
+const nextConfig = {
 	esModule: true,
 	env: {
 		API_BASE_URL: process.env.API_BASE_URL,
@@ -9,8 +11,25 @@ module.exports = withImages({
 	future: {
 		strictPostcssConfiguration: true,
 	},
-	extends: ['plugin:@next/next/recommended'],
+	extends: [],
 	images: {
 		domains: ['avatars.githubusercontent.com'],
 	},
-});
+};
+
+module.exports = withPlugins(
+	[
+		[withImages, { inlineImageLimit: false }],
+		[
+			withPWA,
+			{
+				pwa: {
+					disable: process.env.NODE_ENV !== 'production',
+					dest: 'public',
+					runtimeCaching,
+				},
+			},
+		],
+	],
+	nextConfig
+);

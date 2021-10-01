@@ -1,11 +1,15 @@
-import Head from 'next/head';
-import UserComponent from '@components/User';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 
+// --- Interfaces ---
 import { IUser } from '@interfaces/IUser';
 
+// --- Hooks ---
 import { useFetch } from '@hooks/useFetch';
+
+// --- Components ---
+import UserComponent from '@components/User';
 
 const UserPage: NextPage = () => {
 	const { query } = useRouter();
@@ -15,9 +19,10 @@ const UserPage: NextPage = () => {
 
 	return (
 		<>
-			<Head>
-				<title>{login && !error ? `👤 ${login}` : !error ? 'Loading...' : 'Erro!'}</title>
-			</Head>
+			<NextSeo
+				title={login && !error ? `👤 ${login}` : !error ? 'Loading...' : 'Erro!'}
+				description="A short description goes here."
+			/>
 
 			<main>
 				<UserComponent user={data} error={error} />

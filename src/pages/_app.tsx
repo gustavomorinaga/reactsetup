@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
-
 import { motion } from 'framer-motion';
 
+// --- Styles ---
 import '@styles/global.scss';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps, router }) => {

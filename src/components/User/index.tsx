@@ -1,13 +1,16 @@
-import { useRef } from 'react';
-import Loader from '@components/Loader';
 import Image from 'next/image';
+import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
+// --- Interfaces ---
 import { IUser_Page } from '@interfaces/IUser';
 
-import { motion } from 'framer-motion';
+// --- Styles ---
 import styles from './index.module.scss';
-
 import { FiBook, FiGithub, FiMapPin, FiUsers } from 'react-icons/fi';
+
+// --- Components ---
+import Loader from '@components/Loader';
 
 export default function UserComponent({ user, error }: IUser_Page): JSX.Element {
 	const constraintsRef = useRef(null);

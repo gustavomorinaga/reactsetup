@@ -11,12 +11,19 @@ class MyDocument extends Document<DocumentProps> {
 		return (
 			<Html lang="en">
 				<Head>
-					<meta charSet="UTF-8" />
-					<meta
-						name="description"
-						content="Template for React, with Next.js, SWR, Axios, TypeScript, ESLint, Prettier, Framer Motion, Tailwind and Sass"
+					<link rel="manifest" href="/site.webmanifest" />
+					<link
+						href="/assets/icons/favicon-16x16.png"
+						rel="icon"
+						type="image/png"
+						sizes="16x16"
 					/>
-					<meta name="robots" content="index, follow" />
+					<link
+						href="/assets/icons/favicon-32x32.png"
+						rel="icon"
+						type="image/png"
+						sizes="32x32"
+					/>
 					<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link

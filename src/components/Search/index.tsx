@@ -1,3 +1,4 @@
+// --- Styles ---
 import { FiGithub, FiSearch } from 'react-icons/fi';
 import styles from './index.module.scss';
 
@@ -10,7 +11,7 @@ export default function SearchComponent({
 	return (
 		<div className={styles.container}>
 			<form className={styles.search}>
-				<label htmlFor="login">
+				<label>
 					<FiGithub className={styles.label_icon} />
 					<input
 						type="text"
@@ -21,7 +22,7 @@ export default function SearchComponent({
 						onChange={handleChangeLogin}
 					/>
 				</label>
-				<button onClick={handleSearchLogin}>
+				<button onClick={handleSearchLogin} aria-label="Search">
 					<FiSearch />
 				</button>
 			</form>
