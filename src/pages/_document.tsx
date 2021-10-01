@@ -11,19 +11,21 @@ class MyDocument extends Document<DocumentProps> {
 		return (
 			<Html lang="en">
 				<Head>
-					<link rel="manifest" href="/site.webmanifest" />
+					<meta name="theme-color" content="#a78bfa" />
+					<link rel="manifest" href="./site.webmanifest" />
 					<link
-						href="/assets/icons/favicon-16x16.png"
+						href="./assets/icons/icon-16x16.png"
 						rel="icon"
 						type="image/png"
 						sizes="16x16"
 					/>
 					<link
-						href="/assets/icons/favicon-32x32.png"
+						href="./assets/icons/icon-32x32.png"
 						rel="icon"
 						type="image/png"
 						sizes="32x32"
 					/>
+					<link rel="apple-touch-icon" href="./assets/icons/icon-32x32.png"></link>
 					<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link
