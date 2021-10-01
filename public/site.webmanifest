@@ -1,8 +1,8 @@
 {
 	"name": "Next.JS Template",
 	"short_name": "Next Template",
-	"theme_color": "#374151",
-	"background_color": "#a78bfa",
+	"theme_color": "#a78bfa",
+	"background_color": "#374151",
 	"display": "standalone",
 	"lang": "en",
 	"orientation": "portrait",
