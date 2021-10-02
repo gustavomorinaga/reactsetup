@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { DefaultSeo } from 'next-seo';
+import { NextSeo } from 'next-seo';
 
 // --- Interfaces ---
 import { IUser } from '@interfaces/IUser';
@@ -19,7 +19,7 @@ const UserPage: NextPage = () => {
 
 	return (
 		<>
-			<DefaultSeo
+			<NextSeo
 				title={login && !error ? `👤 ${login}` : !error ? 'Loading...' : 'Erro!'}
 				description="A short description goes here."
 			/>

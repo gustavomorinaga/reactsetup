@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { DefaultSeo } from 'next-seo';
 import { useState } from 'react';
+import { NextSeo } from 'next-seo';
 
 // --- Components ---
 import SearchComponent from '@components/Search';
@@ -20,7 +20,7 @@ const HomePage: NextPage = () => {
 
 	return (
 		<>
-			<DefaultSeo
+			<NextSeo
 				title="🔍 Search GitHub Profile..."
 				description="A short description goes here."
 			/>

@@ -1,5 +1,8 @@
 import { AppProps } from 'next/app';
+import { DefaultSeo } from 'next-seo';
 import { motion } from 'framer-motion';
+
+import SEO from '../../next-seo.config';
 
 // --- Styles ---
 import '@styles/global.scss';
@@ -27,6 +30,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps, router }) => {
 			variants={pageEffects}
 			style={{ width: '100%', height: '100%' }}
 		>
+			<DefaultSeo {...SEO} />
 			<Component {...pageProps} />
 		</motion.div>
 	);
