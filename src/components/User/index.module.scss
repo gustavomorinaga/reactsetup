@@ -18,8 +18,7 @@
 
 		& .avatar {
 			@apply relative md:w-24 md:h-24 w-48 h-48 overflow-hidden
-				border-2 border-solid border-purple-400 rounded-full
-			;
+				border-2 border-solid border-purple-400 rounded-full;
 		}
 
 		& .content {
@@ -48,12 +47,20 @@
 				& > * {
 					@apply flex items-center gap-1 px-2 border rounded-lg;
 
-					& strong { @apply font-medium; }
+					& strong {
+						@apply font-medium;
+					}
 				}
 
-				& .follow { @apply bg-green-500 border-green-600; }
-				& .public_repos { @apply bg-yellow-500 border-yellow-600; }
-				& .location { @apply bg-blue-500 border-blue-600; }
+				& .follow {
+					@apply bg-green-500 border-green-600;
+				}
+				& .public_repos {
+					@apply bg-yellow-500 border-yellow-600;
+				}
+				& .location {
+					@apply bg-blue-500 border-blue-600;
+				}
 			}
 
 			& .bio {
