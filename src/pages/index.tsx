@@ -15,7 +15,7 @@ const HomePage: NextPage = () => {
 
 	const handleSearchLogin = (event: Event) => {
 		event.preventDefault();
-		if (login) router.push(`/${login.trim()}`);
+		login && router.push(`/${login.trim()}`);
 	};
 
 	return (
