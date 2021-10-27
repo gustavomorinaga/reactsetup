@@ -1,24 +1,22 @@
 {
-  "compilerOptions": {
-    "target": "es2020",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
+	"compilerOptions": {
+		"target": "ES2021",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": false,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
 		"baseUrl": ".",
 		"paths": {
+			"@docs/*": ["./docs/*"],
+			"@icons/*": ["./public/assets/icons/*"],
 			"@images/*": ["./public/assets/images/*"],
 			"@sounds/*": ["./public/assets/sounds/*"],
 			"@videos/*": ["./public/assets/videos/*"],
@@ -27,15 +25,10 @@
 			"@interfaces/*": ["./src/interfaces/*"],
 			"@pages/*": ["./src/pages/*"],
 			"@services/*": ["./src/services/*"],
-			"@styles/*": ["./src/styles/*"],
-		}
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+			"@styles/*": ["./src/styles/*"]
+		},
+		"incremental": true
+	},
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"exclude": ["node_modules"]
 }
