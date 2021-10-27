@@ -4,8 +4,6 @@ const withImages = require('next-images');
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
 
-const isProduction = process.env.NODE_ENV === 'production';
-
 const nextConfig = {
 	esModule: true,
 	env: {
@@ -43,7 +41,7 @@ module.exports = withPlugins(
 			withPWA,
 			{
 				pwa: {
-					disable: !isProduction,
+					disable: process.env.NODE_ENV !== 'production',
 					dest: 'public',
 					register: true,
 					skipWaiting: true,
