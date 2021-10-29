@@ -1,9 +1,11 @@
-import useSWR from 'swr';
+import useSWR, { SWRConfiguration } from 'swr';
+
+// --- Services ---
 import { fetcher } from '@services/api';
 
-const SEGUNDOS = 30;
+const SECONDS = 30;
 
-export function useFetch<Data = any, Error = any>(url: string, initial?: any) {
+export function useFetch<Data = any, Error = any>(url: string, opts?: SWRConfiguration) {
 	const { data, error, mutate } = useSWR<Data, Error>(
 		url,
 		async url => {
@@ -11,7 +13,10 @@ export function useFetch<Data = any, Error = any>(url: string, initial?: any) {
 
 			return response;
 		},
-		{ fallbackData: initial, refreshInterval: SEGUNDOS * 1000 }
+		{
+			...opts,
+			refreshInterval: SECONDS * 1000,
+		}
 	);
 
 	return { data, error, mutate };

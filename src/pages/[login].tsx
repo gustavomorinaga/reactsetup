@@ -1,9 +1,13 @@
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
+import { useContext } from 'react';
 import { NextSeo } from 'next-seo';
 
 // --- Interfaces ---
 import { IUser } from '@interfaces/IUser';
+
+// --- Contexts ---
+import UserContext from '@contexts/User';
 
 // --- Hooks ---
 import { useFetch } from '@hooks/useFetch';
@@ -15,7 +19,9 @@ const UserPage: NextPage = () => {
 	const { query } = useRouter();
 	const { login } = query;
 
-	const { data, error } = useFetch<IUser>(`users/${login}`);
+	const { state } = useContext(UserContext);
+
+	const { data, error } = useFetch<IUser>(`users/${state.login ? state.login : login}`);
 
 	return (
 		<>

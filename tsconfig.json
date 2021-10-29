@@ -21,6 +21,7 @@
 			"@sounds/*": ["./public/assets/sounds/*"],
 			"@videos/*": ["./public/assets/videos/*"],
 			"@components/*": ["./src/components/*"],
+			"@contexts/*": ["./src/contexts/*"],
 			"@hooks/*": ["./src/hooks/*"],
 			"@interfaces/*": ["./src/interfaces/*"],
 			"@pages/*": ["./src/pages/*"],

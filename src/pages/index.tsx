@@ -1,12 +1,16 @@
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { NextSeo } from 'next-seo';
+
+// --- Contexts ---
+import UserContext from '@contexts/User';
 
 // --- Components ---
 import SearchComponent from '@components/Search';
 
 const HomePage: NextPage = () => {
+	const { state, setState } = useContext(UserContext);
 	const [login, setLogin] = useState('');
 
 	const router = useRouter();
@@ -15,6 +19,7 @@ const HomePage: NextPage = () => {
 
 	const handleSearchLogin = (event: Event) => {
 		event.preventDefault();
+		setState({ ...state, login });
 		login && router.push(`/${login.trim()}`);
 	};
 

@@ -1,6 +1,6 @@
 // --- Styles ---
-import { FiGithub, FiSearch } from 'react-icons/fi';
 import styles from './index.module.scss';
+import { FiGithub, FiSearch } from 'react-icons/fi';
 
 export default function SearchComponent({
 	login,
