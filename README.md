@@ -50,6 +50,7 @@
 -->
 
 <!-- Link Demo Section -->
+
 ## 🚀 [Demo](https://reactsetup-sigma.vercel.app)
 
 ## ❔ About
@@ -69,7 +70,9 @@ This app features all the latest tools and good practices in web development!
 - 🎨 [Tailwind CSS](https://tailwindcss.com/) – A utility-first CSS framework packed with classes
 - 🐺 [Husky](https://github.com/typicode/husky) – Modern native Git hooks made easy
 - 💩 [lint-staged](https://github.com/okonet/lint-staged) – Run linters against staged git files and don't let 💩 slip into your code base
-- 📓 [commitlint](https://commitlint.js.org/#/) – helps your team adhering to a commit convention
+- 📓 [commitlint](https://commitlint.js.org/#/) – Helps your team adhering to a commit convention
+- 📱 [next-pwa](https://github.com/shadowwalker/next-pwa) – A PWA plugin for Next.js
+- 📈 [next-seo](https://github.com/garmeeh/next-seo) – A plugin that makes managing your SEO easier in Next.js projects
 
 ## ▶️ Get Started
 
