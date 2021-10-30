@@ -9,7 +9,7 @@ body {
 
 main,
 #__next {
-	@apply h-full;
+	@apply h-full overflow-hidden;
 }
 
 #__next {

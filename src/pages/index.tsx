@@ -1,16 +1,16 @@
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { NextSeo } from 'next-seo';
-
-// --- Contexts ---
-import UserContext from '@contexts/User';
+import { motion } from 'framer-motion';
 
 // --- Components ---
 import SearchComponent from '@components/Search';
 
+// -- Animations --
+import { slide } from '@animations/index';
+
 const HomePage: NextPage = () => {
-	const { state, setState } = useContext(UserContext);
 	const [login, setLogin] = useState('');
 
 	const router = useRouter();
@@ -19,26 +19,30 @@ const HomePage: NextPage = () => {
 
 	const handleSearchLogin = (event: Event) => {
 		event.preventDefault();
-		setState({ ...state, login });
-		login && router.push(`/${login.trim()}`);
+		login && router.push(`/${login.trim()}`, undefined, { shallow: true });
 	};
 
 	return (
-		<>
+		<motion.div
+			initial="initial"
+			animate="animate"
+			exit="exit"
+			variants={slide}
+			transition={{ type: 'spring', stiffness: 100 }}
+			style={{ height: '100%' }}
+		>
 			<NextSeo
 				title="🔍 Search GitHub Profile..."
 				description="A short description goes here."
 			/>
 
-			<main>
-				<SearchComponent
-					login={login}
-					handleChangeLogin={handleChangeLogin}
-					handleSearchLogin={handleSearchLogin}
-					placeholder="Search GitHub Profile..."
-				/>
-			</main>
-		</>
+			<SearchComponent
+				login={login}
+				handleChangeLogin={handleChangeLogin}
+				handleSearchLogin={handleSearchLogin}
+				placeholder="Search GitHub Profile..."
+			/>
+		</motion.div>
 	);
 };
 

@@ -12,37 +12,31 @@ import { FiBook, FiGithub, FiMapPin, FiUsers } from 'react-icons/fi';
 // --- Components ---
 import Loader from '@components/Loader';
 
+// --- Animations ---
+import zoom from '@animations/zoom';
+
 export default function UserComponent({ user, error }: IUser_Page): JSX.Element {
 	const constraintsRef = useRef(null);
 
-	const hoverEffects: any = {
-		position: 'relative',
-		zIndex: 1,
-		scale: [1, 1.4, 1.2],
-		transition: {
-			duration: 0.2,
-		},
-	};
-
 	if (error)
 		return (
-			<article className={styles.container}>
+			<div className={styles.container}>
 				<h1 className={styles.error_message}>Houve um erro!</h1>
-			</article>
+			</div>
 		);
 
 	if (!user)
 		return (
-			<article className={styles.container}>
+			<div className={styles.container}>
 				<Loader />
-			</article>
+			</div>
 		);
 
 	return (
-		<motion.article className={styles.container} ref={constraintsRef}>
+		<motion.div className={styles.container} ref={constraintsRef}>
 			<motion.section
 				className={styles.user}
-				whileHover={hoverEffects}
+				whileHover={zoom}
 				drag
 				dragConstraints={constraintsRef}
 				dragElastic={0.5}
@@ -50,7 +44,6 @@ export default function UserComponent({ user, error }: IUser_Page): JSX.Element 
 			>
 				<picture className={styles.avatar}>
 					<Image
-						id="image"
 						src={user.avatar_url}
 						loading="lazy"
 						layout="fill"
@@ -97,6 +90,6 @@ export default function UserComponent({ user, error }: IUser_Page): JSX.Element 
 					{user.bio && <p className={styles.bio}>{user.bio}</p>}
 				</div>
 			</motion.section>
-		</motion.article>
+		</motion.div>
 	);
 }

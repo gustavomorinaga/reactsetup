@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 // --- Styles ---
 import styles from './index.module.scss';
 import { FiGithub, FiSearch } from 'react-icons/fi';
@@ -9,7 +11,7 @@ export default function SearchComponent({
 	placeholder,
 }): JSX.Element {
 	return (
-		<div className={styles.container}>
+		<motion.div className={styles.container}>
 			<form className={styles.search}>
 				<label>
 					<FiGithub className={styles.label_icon} />
@@ -26,6 +28,6 @@ export default function SearchComponent({
 					<FiSearch />
 				</button>
 			</form>
-		</div>
+		</motion.div>
 	);
 }
