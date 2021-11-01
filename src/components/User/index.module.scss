@@ -17,7 +17,7 @@
 			cursor-move;
 
 		& .avatar {
-			@apply relative md:w-24 md:h-24 w-48 h-48 overflow-hidden
+			@apply relative md:w-24 md:h-24 w-48 h-48 overflow-hidden pointer-events-none
 				border-2 border-solid border-purple-600 dark:border-purple-400 rounded-full;
 		}
 
