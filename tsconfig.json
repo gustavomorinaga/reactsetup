@@ -25,6 +25,7 @@
 			"@hooks/*": ["./src/hooks/*"],
 			"@interfaces/*": ["./src/interfaces/*"],
 			"@pages/*": ["./src/pages/*"],
+			"@scripts/*": ["./src/scripts/*"],
 			"@services/*": ["./src/services/*"],
 			"@styles/*": ["./src/styles/*"]
 		},

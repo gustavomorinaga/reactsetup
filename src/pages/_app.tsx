@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
+import '@scripts/wdyr';
 
 // --- Configs ---
 import SEO from '../../next-seo.config';
